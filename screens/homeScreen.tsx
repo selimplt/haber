@@ -1,21 +1,21 @@
-import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { View, Text, TouchableOpacity } from "react-native";
-import { useNavigation } from "@react-navigation/native";
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 
-type RootStackParamList = {
-  home: undefined;
-  haberDetay: undefined;
-};
+import BreakingNews from './BreakingNews';
+import PoliticNews from './PoliticNews';
+import SportNews from './SportNews';
 
-type HomeScreenNavigationProp = NativeStackNavigationProp<RootStackParamList, 'home'>;
 
 const HomeScreen = () => {
-  const navigation = useNavigation<HomeScreenNavigationProp>();
+  const Tab = createMaterialTopTabNavigator();
   return (
-    <View className='flex-1 bg-neutral-800'>
-      <Text className='text-3xl'>homeScreen</Text>
-      <TouchableOpacity onPress={() => navigation.push("haberDetay")}><Text>asd</Text></TouchableOpacity>
-    </View>
+    <Tab.Navigator screenOptions={{
+      tabBarScrollEnabled: true, tabBarStyle: { backgroundColor: '#0f1316'}, tabBarIndicatorStyle: { backgroundColor: '#FF6B00', height: 3 },
+      tabBarActiveTintColor: '#FF6B00', tabBarInactiveTintColor: '#8B8B8B',
+    }}>
+      <Tab.Screen name="Gündem" component={BreakingNews} />
+      <Tab.Screen name="Siyaset" component={PoliticNews} />
+      <Tab.Screen name="Spor Haberleri" component={SportNews} />
+    </Tab.Navigator>
   )
 }
 

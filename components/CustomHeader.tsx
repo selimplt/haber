@@ -1,11 +1,11 @@
 import { View, Text, TouchableOpacity } from 'react-native'
-import React from 'react'
+import * as React from 'react'
 import Ionicons from '@react-native-vector-icons/ionicons'
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-const CustomHeader = ({ navigation, back, options }: any) => {
+const CustomHeader = ({ navigation, back }: any) => {
     return (
-        <View className="w-full h-24 bg-neutral-900 border border-b-neutral-700">
+        <View className="w-full h-24 bg-[#0f1316]">
             <SafeAreaView className='w-full h-full'>
                 <View className='relative w-full h-full justify-center items-center flex-row pt-2'>
                     {back ? (

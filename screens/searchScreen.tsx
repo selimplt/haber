@@ -3,7 +3,7 @@ import React from 'react'
 
 const SearchScreen = () => {
   return (
-    <View className='flex-1 bg-neutral-800'>
+    <View className='flex-1 bg-[#0f1316]'>
       <Text>searchScreen</Text>
     </View>
   )

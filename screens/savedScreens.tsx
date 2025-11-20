@@ -3,7 +3,7 @@ import React from 'react'
 
 const SavedScreens = () => {
   return (
-    <View className='flex-1 bg-neutral-800'>
+    <View className='flex-1 bg-[#0f1316]'>
       <Text>savedScreens</Text>
     </View>
   )
