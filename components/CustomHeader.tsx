@@ -3,7 +3,7 @@ import React from 'react'
 import Ionicons from '@react-native-vector-icons/ionicons'
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-const MyCustomHeader = ({ navigation, back, options }: any) => {
+const CustomHeader = ({ navigation, back, options }: any) => {
     return (
         <View className="w-full h-24 bg-neutral-900 border border-b-neutral-700">
             <SafeAreaView className='w-full h-full'>
@@ -20,4 +20,4 @@ const MyCustomHeader = ({ navigation, back, options }: any) => {
     )
 }
 
-export default MyCustomHeader
+export default CustomHeader
