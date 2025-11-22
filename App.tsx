@@ -13,7 +13,7 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ header: (props) => <CustomHeader {...props} /> }}>
         <Stack.Screen name="altBar" component={BottomTabs}  />
-        <Stack.Screen name="haberDetay" component={NewsDetail} />
+        <Stack.Screen name="NewsDetail" component={NewsDetail} />
       </Stack.Navigator>
     </NavigationContainer>
   );
